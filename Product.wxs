@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  
+  <Product Id="*" 
+           Name="Test Wix Setup"
+           Language="1033" 
+           Version="1.0.0.0" 
+           Manufacturer="MTX" 
+           UpgradeCode="391B1B09-AEA2-4CD6-B9E6-32203EE1A056">    
+            <Package 
+              InstallerVersion="200" 
+              Compressed="yes" 
+              InstallScope="perMachine" />
+            <MajorUpgrade 
+              DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+            <MediaTemplate 
+              EmbedCab="yes"/>
+            <Feature 
+              Id="ProductFeature" 
+              Title="SetupProject" 
+              Level="1">    
+              <ComponentGroupRef 
+                Id="ProductComponents" />
+            </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="Wixa" />
+          <Directory Id="INSTALLSUBFOLDER" Name="Test Install" />
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">  
+      <Component Id="CMP_InstallMe"
+                 Guid="06E39957-CCC9-419E-BE28-33A6CF514ACE">
+        <File Id="FILE_InstallMe"
+              Source="InstallMe.txt"
+              KeyPath="yes">
+        </File>    
+      </Component> 
+    </ComponentGroup>
+  </Fragment>
+</Wix>

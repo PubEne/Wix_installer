@@ -1,0 +1,6 @@
+C:\Users\Test\3D Objects\Wix_installer\bin\Debug\SetupProject.msi
+C:\Users\Test\3D Objects\Wix_installer\bin\Debug\SetupProject.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\SetupProject.wixproj.BindContentsFileListnull.txt
+obj\Debug\SetupProject.wixproj.BindOutputsFileListnull.txt
+obj\Debug\SetupProject.wixproj.BindBuiltOutputsFileListnull.txt
